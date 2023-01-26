@@ -18,7 +18,7 @@ public class StudentController {
         return "Updated Successfully congratualations";
 
     }
-    @DeleteMapping("/delete_student/admno}")
+    @DeleteMapping("/delete_student/{admno}")
     public String deleteStudent(@RequestBody Student student){
        int admno=student.getAdmno();
         db.remove(admno);
